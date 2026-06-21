@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header & Nav giữ nguyên từ trang chủ */
+header {
+    background-color: #80001c;
+    color: white;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.search-bar {
+    display: flex;
+    width: 40%;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 35px 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cart-icon {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    border-bottom: 2px solid #80001c;
+    padding-bottom: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Product Detail Layout */
+.product-detail-container {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.product-images {
+    width: 45%;
+}
+
+.main-img {
+    width: 100%;
+    border: 1px solid #eee;
+    background: #f9f9f9;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.thumb-gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.thumb-gallery img {
+    width: calc(25% - 8px);
+    border: 1px solid #ddd;
+    padding: 2px;
+    cursor: pointer;
+    background: #f9f9f9;
+}
+
+.thumb-gallery img.active {
+    border-color: #000;
+}
+
+.product-meta {
+    width: 55%;
+}
+
+.product-name {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.current-price {
+    color: #000;
+    font-weight: bold;
+}
+
+.spec-list {
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 2;
+    color: #555;
+}
+
+/* Actions block */
+.action-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.quantity-selector {
+    display: flex;
+    border: 1px solid #ccc;
+    height: 40px;
+    align-items: center;
+}
+
+.quantity-selector button {
+    width: 35px;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity-selector input {
+    width: 45px;
+    height: 100%;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    outline: none;
+}
+
+.btn {
+    height: 40px;
+    padding: 0 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-add-cart {
+    background-color: #c05621;
+    color: white;
+}
+
+.btn-buy-now {
+    background-color: #2b6cb0;
+    color: white;
+}
+
+/* Description block */
+.description-section {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333;
+    width: fit-content;
+    padding-bottom: 5px;
+}
+
+.desc-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* Video embed wrapper placeholder */
+.video-container {
+    width: 100%;
+    max-width: 640px;
+    position: relative;
+    background: #000;
+    margin-bottom: 40px;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.video-placeholder-ui {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.play-btn {
+    font-size: 50px;
+    color: red;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Sub text & Footer giống hệt trang chủ */
+.sub-info {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    max-width: 600px;
+    margin: 40px auto 20px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #666;
+    color: white;
+    padding: 30px 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    font-size: 14px;
+}
+
+.footer-col h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #888;
+    padding-bottom: 5px;
+}
+
+.footer-col p {
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 16px;
+}
